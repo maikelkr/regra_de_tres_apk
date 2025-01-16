@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/referenceNumber"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="200dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="@string/but_text"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:background="@drawable/rounded_corner"
+        android:textColor="@color/darkgray"
+        android:textColorHint="@color/darkgray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/equivalentNumber"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="200dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="@string/equivalent_text"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:background="@drawable/rounded_corner"
+        android:textColor="@color/darkgray"
+        android:textColorHint="@color/darkgray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/comparisonNumber"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="@string/comparison_text"
+        android:inputType="number"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:background="@drawable/rounded_corner"
+        android:textColor="@color/darkgray"
+        android:textColorHint="@color/darkgray"
+        app:layout_constraintStart_toStartOf="@+id/referenceNumber"
+        app:layout_constraintTop_toBottomOf="@id/referenceNumber" />
+
+    <EditText
+        android:id="@+id/resultNumber"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:hint="@string/result_text"
+        android:inputType="number"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:background="@drawable/rounded_corner"
+        android:textColor="@color/darkgray"
+        android:textColorHint="@color/darkgray"
+        app:layout_constraintEnd_toEndOf="@+id/equivalentNumber"
+        app:layout_constraintTop_toBottomOf="@id/equivalentNumber" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/clear_btn_text"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/comparisonNumber"
+        app:layout_constraintTop_toBottomOf="@+id/inverseProportional" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/calc_btn_text"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/resultNumber"
+        app:layout_constraintTop_toTopOf="@+id/clearButton" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:backgroundTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/inverseProportional"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:switchPadding="10dp"
+        android:layout_marginStart="-130dp"
+        android:text="@string/inverse_btn_text"
+        android:textSize="18sp"
+        android:layoutDirection="rtl"
+        app:layout_constraintStart_toStartOf="@+id/comparisonNumber"
+        app:layout_constraintTop_toBottomOf="@+id/comparisonNumber"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
