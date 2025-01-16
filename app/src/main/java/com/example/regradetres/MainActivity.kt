@@ -23,9 +23,15 @@ class MainActivity : AppCompatActivity() {
         val equivalentNumber = binding.equivalentNumber.text.toString().toDouble()
         val comparisonNumber = binding.comparisonNumber.text.toString().toDouble()
 
-        val result = (comparisonNumber * equivalentNumber) / (referenceNumber)
-        binding.resultNumber.setText(result.toString())
-
+        binding.inverseProportional.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                val result = (comparisonNumber * equivalentNumber) / (referenceNumber)
+                binding.resultNumber.setText(result.toString())
+            } else {
+                val result = (comparisonNumber * referenceNumber) / (equivalentNumber)
+                binding.resultNumber.setText(result.toString())
+            }
+        }
     }
     private fun clear() {
         binding.referenceNumber.setText("")
