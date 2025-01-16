@@ -8,6 +8,7 @@ import com.example.regradetres.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    lateinit val result = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -25,13 +26,13 @@ class MainActivity : AppCompatActivity() {
 
         binding.inverseProportional.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                val result = (comparisonNumber * equivalentNumber) / (referenceNumber)
-                binding.resultNumber.setText(result.toString())
+                result = (comparisonNumber * equivalentNumber) / (referenceNumber)
+
             } else {
-                val result = (comparisonNumber * referenceNumber) / (equivalentNumber)
-                binding.resultNumber.setText(result.toString())
+                result = (comparisonNumber * referenceNumber) / (equivalentNumber)
             }
         }
+        binding.resultNumber.setText(result.toString())
     }
     private fun clear() {
         binding.referenceNumber.setText("")
