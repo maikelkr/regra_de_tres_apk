@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Regra de Três</string>
+    <string name="back">Voltar</string>
+    <string name="calc_btn_text">Calcular</string>
+    <string name="comparison_text">Então</string>
+    <string name="equivalent_text">Equivale a</string>
+    <string name="inverse_btn_text">Inversamente proporcional</string>
+    <string name="clear_btn_text">Limpar</string>
+    <string name="reference_text">Se</string>
+    <string name="result_text">X</string>
+    <string name="required_txt">Obrigatório*</string>
+</resources>

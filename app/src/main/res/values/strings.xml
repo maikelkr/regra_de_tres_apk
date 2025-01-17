@@ -1,11 +1,12 @@
 <resources>
-    <string name="app_name">RegraDeTres</string>
-    <string name="reference_text">Se</string>
-    <string name="equivalent_text">Equivale a</string>
-    <string name="comparison_text">Então</string>
+    <string name="app_name">Rule of Three</string>
+    <string name="reference_text">If</string>
+    <string name="equivalent_text">Equivalent to</string>
+    <string name="comparison_text">Then</string>
     <string name="result_text">X</string>
-    <string name="clear_btn_text">Limpar</string>
-    <string name="calc_btn_text">Calcular</string>
-    <string name="inverse_btn_text">Inversamente proporcional</string>
+    <string name="clear_btn_text">Reset</string>
+    <string name="calc_btn_text">Calculate</string>
+    <string name="inverse_btn_text">Inversely proportional</string>
     <string name="back">Back</string>
+    <string name="required_txt">Required*</string>
 </resources>
