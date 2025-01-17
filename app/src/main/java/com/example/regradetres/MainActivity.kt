@@ -15,9 +15,14 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(binding.root)
         binding.calculateButton.setOnClickListener {
-            calculate() }
+            calculate()
+        }
         binding.clearButton.setOnClickListener {
-            clear() }
+            clear()
+        }
+        binding.backBtn.setOnClickListener {
+            finish()
+        }
     }
     private fun calculate() {
         val referenceNumber = binding.referenceNumber.text.toString().toDouble()

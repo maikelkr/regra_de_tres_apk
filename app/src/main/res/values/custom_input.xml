@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="CustomBorderTextInputEditText" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="boxStrokeColor">@color/gray</item>
-        <item name="hintTextColor">?attr/colorPrimary</item>
-    </style>
-</resources>
