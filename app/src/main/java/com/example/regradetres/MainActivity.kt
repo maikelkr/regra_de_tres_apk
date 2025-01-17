@@ -1,5 +1,6 @@
 package com.example.regradetres
 
+import android.R
 import android.os.Build
 import android.os.Bundle
 import android.view.WindowMetrics
@@ -15,6 +16,7 @@ import com.google.android.gms.ads.MobileAds
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.util.Locale
 
 
 class MainActivity : AppCompatActivity() {
@@ -29,6 +31,16 @@ class MainActivity : AppCompatActivity() {
         backgroundScope.launch {
             // Initialize the Google Mobile Ads SDK on a background thread.
             MobileAds.initialize(this@MainActivity) {}
+        }
+        binding.imageLogo.setImageResource(com.example.regradetres.R.drawable.logo_app_en_us)
+        when (Locale.getDefault().language) {
+            "en" -> {
+                binding.imageLogo.setImageResource(com.example.regradetres.R.drawable.logo_app_en_us)
+            }
+
+            "pt" -> {
+                binding.imageLogo.setImageResource(com.example.regradetres.R.drawable.logo_app_pt_br)
+            }
         }
         binding.calculateButton.setOnClickListener {
             calculate()
