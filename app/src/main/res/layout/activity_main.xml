@@ -18,6 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/back_btn"
+        app:strokeColor="@null"
         style="@style/LogoColor"/>
 
     <ImageView
@@ -30,11 +31,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_app_en_us"
+        app:strokeColor="@null"
         style="@style/LogoColor"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/referenceNumberLabel"
         style="@style/InputStyle"
+        app:strokeColor="@null"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -48,6 +51,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             style="@style/EditTextStyle"
+            app:strokeColor="@null"
             android:id="@+id/referenceNumber"
             android:layout_width="160dp"
             android:layout_height="50dp"
@@ -61,6 +65,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/equivalentNumberLabel"
         style="@style/InputStyle"
+        app:strokeColor="@null"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="40dp"
@@ -73,6 +78,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             style="@style/EditTextStyle"
+            app:strokeColor="@null"
             android:id="@+id/equivalentNumber"
             android:layout_width="160dp"
             android:layout_height="50dp"
@@ -85,6 +91,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/comparisonNumberLabel"
         style="@style/InputStyle"
+        app:strokeColor="@null"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -97,6 +104,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             style="@style/EditTextStyle"
+            app:strokeColor="@null"
             android:id="@+id/comparisonNumber"
             android:layout_width="160dp"
             android:layout_height="50dp"
@@ -110,6 +118,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/resultNumberLabel"
         style="@style/InputStyle"
+        app:strokeColor="@null"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -119,6 +128,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             style="@style/EditTextStyle"
+            app:strokeColor="@null"
             android:id="@+id/resultNumber"
             android:layout_width="160dp"
             android:layout_height="50dp"
@@ -132,6 +142,7 @@
     <Button
         android:id="@+id/clearButton"
         style="@style/ButtonStyle"
+        app:strokeColor="@null"
         android:layout_width="150dp"
         android:layout_height="70dp"
         android:layout_marginTop="40dp"
@@ -143,6 +154,7 @@
     <Button
         android:id="@+id/calculateButton"
         style="@style/ButtonStyle"
+        app:strokeColor="@null"
         android:layout_width="170dp"
         android:layout_height="70dp"
         android:text="@string/calc_btn_text"
@@ -164,6 +176,17 @@
         app:layout_constraintTop_toBottomOf="@+id/comparisonNumberLabel"
         tools:ignore="UseSwitchCompatOrMaterialXml,TextSizeCheck" />
 
-
-
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculateButton">
+    </com.google.android.gms.ads.AdView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -12,12 +12,12 @@
     </style>
     <style name="ButtonStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="boxStrokeColor">@color/gray</item>
-        <item name="hintTextColor">?attr/colorPrimary</item>
+        <item name="hintTextColor">@color/gray</item>
         <item name="android:backgroundTint">@color/dark_white</item>
         <item name="android:textColor">@color/gray</item>
     </style>
     <style name="InputStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="hintTextColor">?attr/colorPrimary</item>
+        <item name="hintTextColor">@color/gray</item>
         <item name="android:textColorHint">@color/light_gray</item>
         <item name="android:backgroundTint">@color/dark_white</item>
         <item name="helperTextTextColor">@color/red</item>
