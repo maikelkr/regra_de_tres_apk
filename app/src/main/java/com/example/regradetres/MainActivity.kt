@@ -1,37 +1,27 @@
 package com.example.regradetres
 
-import android.R
 import android.os.Build
 import android.os.Bundle
 import android.view.WindowMetrics
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.regradetres.databinding.ActivityMainBinding
-import com.google.android.gms.ads.AdListener
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdSize
-import com.google.android.gms.ads.AdView
-import com.google.android.gms.ads.LoadAdError
-import com.google.android.gms.ads.MobileAds
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import java.util.Locale
 
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    var result = "0"
+    var result = " "
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         enableEdgeToEdge()
         setContentView(binding.root)
-        val backgroundScope = CoroutineScope(Dispatchers.IO)
+        /*val backgroundScope = CoroutineScope(Dispatchers.IO)
         backgroundScope.launch {
             // Initialize the Google Mobile Ads SDK on a background thread.
             MobileAds.initialize(this@MainActivity) {}
-        }
+        }*/
         binding.imageLogo.setImageResource(com.example.regradetres.R.drawable.logo_app_en_us)
         when (Locale.getDefault().language) {
             "en" -> {
@@ -51,18 +41,18 @@ class MainActivity : AppCompatActivity() {
         binding.backBtn.setOnClickListener {
             finish()
         }
-        val adView = AdView(this)
+        /*val adView = AdView(this)
         adView.adUnitId = "ca-app-pub-3940256099942544/9214589741"
         adView.setAdSize(AdSize.BANNER)
 
         val adRequest = AdRequest.Builder().build()
-        adView.loadAd(adRequest)
+        adView.loadAd(adRequest)*/
 
 // Replace ad container with new ad view.
-        binding.adView.removeAllViews()
-        binding.adView.addView(adView)
+    /*    binding.adView.removeAllViews()
+        binding.adView.addView(adView)*/
     }
-    private val adSize: AdSize
+    /*private val adSize: AdSize
     get() {
         val displayMetrics = resources.displayMetrics
         val adWidthPixels =
@@ -75,7 +65,7 @@ class MainActivity : AppCompatActivity() {
         val density = displayMetrics.density
         val adWidth = (adWidthPixels / density).toInt()
         return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, adWidth)
-    }
+    }*/
     private fun calculate() {
         val referenceNumber = binding.referenceNumber.text.toString().toDouble()
         val equivalentNumber = binding.equivalentNumber.text.toString().toDouble()
@@ -83,10 +73,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.inverseProportional.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
-                result = (comparisonNumber * equivalentNumber) / (referenceNumber)
+                result = ((comparisonNumber * equivalentNumber) / (referenceNumber)).toString()
 
             } else {
-                result = (comparisonNumber * referenceNumber) / (equivalentNumber)
+                result = ((comparisonNumber * referenceNumber) / (equivalentNumber)).toString()
             }
         }
         binding.resultNumber.setText(result.toString())
@@ -97,7 +87,7 @@ class MainActivity : AppCompatActivity() {
         binding.comparisonNumber.setText("")
         binding.resultNumber.setText("")
     }
-    adView.adListener = object: AdListener() {
+    /*adView.adListener = object: AdListener() {
         override fun onAdClicked() {
             // Code to be executed when the user clicks on an ad.
         }
@@ -124,5 +114,5 @@ class MainActivity : AppCompatActivity() {
             // Code to be executed when an ad opens an overlay that
             // covers the screen.
         }
-    }
+    }*/
 }
