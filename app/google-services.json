@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "918557914155",
+    "project_id": "regradetresapk",
+    "storage_bucket": "regradetresapk.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918557914155:android:b791b5eb6e49c32776a66e",
+        "android_client_info": {
+          "package_name": "com.example.regradetres"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtUn4g-40rhsLm-J6kEGzE6BoVajYRsDs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

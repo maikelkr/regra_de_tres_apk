@@ -4,13 +4,9 @@ import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.example.regradetres.databinding.ActivityMainBinding
+import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import java.util.Locale
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import com.google.android.gms.ads.AdSize
-import com.google.android.gms.ads.MobileAds
 
 
 class MainActivity : AppCompatActivity() {
@@ -21,18 +17,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         enableEdgeToEdge()
-
-        adView = binding.adView
-        //adView.adUnitId = "ca-app-pub-3940256099942544~3347511713"
-        //adView.setAdSize(AdSize.BANNER)
-        val adRequest = com.google.android.gms.ads.AdRequest.Builder().build()
-        adView.loadAd(adRequest)
+        setContentView(binding.root)
+        adView = findViewById(R.id.adView)
+        adView.loadAd(AdRequest.Builder().build())
         binding()
-
-        val backgroundScope = CoroutineScope(Dispatchers.IO)
-        backgroundScope.launch {
-            MobileAds.initialize(this@MainActivity) {}
-        }
     }
     private fun binding(){
         binding.imageLogo.setImageResource(R.drawable.logo_app_en_us)
@@ -40,13 +28,14 @@ class MainActivity : AppCompatActivity() {
             "en" -> {
                 binding.imageLogo.setImageResource(R.drawable.logo_app_en_us)
             }
-
             "pt" -> {
                 binding.imageLogo.setImageResource(R.drawable.logo_app_pt_br)
             }
         }
         binding.calculateButton.setOnClickListener {
-            calculate()
+            if(binding.comparisonNumber.text.toString() != "" && binding.referenceNumber.text.toString() != "" && binding.equivalentNumber.text.toString() != "") {
+                calculate()
+            }
         }
         binding.clearButton.setOnClickListener {
             clear()
