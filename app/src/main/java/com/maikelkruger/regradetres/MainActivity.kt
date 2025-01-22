@@ -77,13 +77,10 @@ class MainActivity : AppCompatActivity() {
         val equivalentNumber = binding.equivalentNumber.text.toString().toDouble()
         val comparisonNumber = binding.comparisonNumber.text.toString().toDouble()
 
-        binding.inverseProportional.setOnCheckedChangeListener { _, isChecked: Boolean ->
-            result = if (isChecked) {
-                ((comparisonNumber * equivalentNumber) / (referenceNumber)).toString()
-
-            } else {
-                ((comparisonNumber * referenceNumber) / (equivalentNumber)).toString()
-            }
+        if (binding.inverseProportional.isChecked) {
+           result = ((comparisonNumber * referenceNumber) / (equivalentNumber)).toString()
+        } else {
+           result = ((comparisonNumber * equivalentNumber) / (referenceNumber)).toString()
         }
         binding.resultNumber.setText(result)
     }
