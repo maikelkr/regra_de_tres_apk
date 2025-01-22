@@ -1,21 +1,42 @@
-  <body> 
-    <h1>Aplicativo de Regra de Três</h1> 
-    <p>Este é um projeto simples de um aplicativo de Regra de Três desenvolvido para Android utilizando Android Studio e Kotlin.</p> 
-    <h2>Funcionalidades</h2> <ul> <li>Calcular a Regra de Três simples</li> <li>Interface amigável e intuitiva</li> 
-      <li>Compatível com várias versões do Android</li> </ul> 
-    <h2>Progresso de desenvolvimento</h2> <ul> <li>✅ Concluído</li> </ul> 
-    <h2>Tecnologias utilizadas</h2> <ul> <li>✅ Kotlin</li><li>✅ Android Studio</li> </ul>
-    <h2>Progresso de publicação</h2> <ul> <li>Play Store (Em processo de aprovação)</li></ul>
-    <h2>Pré-requisitos</h2> 
-    <ul> <li>Android Studio instalado</li> 
-      <li>Conhecimento básico de Kotlin</li> </ul> 
-    <h2>Instalação</h2> <ol> <li>Clone este repositório: 
-      <code>git clone https://github.com/seu-usuario/regra_de_tres_apk.git</code></li> 
-      <li>Abra o projeto no Android Studio</li> <li>Construa e execute o aplicativo em um dispositivo ou emulador Android</li> </ol> 
-    <h2>Uso</h2> 
-    <p>Insira os valores conhecidos nos campos apropriados e o aplicativo calculará o valor desconhecido utilizando a Regra de Três.</p> 
-    <h2>Contribuição</h2> 
-    <p>Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e enviar pull requests.</p> <h2>Licença</h2> 
-    <p>Este projeto está licenciado sob a <a href="https://opensource.org/licenses/MIT">Licença MIT</a>.</p> <h2>Contato</h2> 
-  <p>Para mais informações, entre em contato comigo.
-  </p>
+<body>
+  <h1>Rule of Three App</h1>
+  <p>This is a simple project of a Rule of Three app developed for Android using Android Studio and Kotlin.</p>
+  <h2>Features</h2>
+  <ul>
+    <li>Calculate simple Rule of Three</li>
+    <li>Friendly and intuitive interface</li>
+    <li>Compatible with various Android versions</li>
+  </ul>
+  <h2>Development Progress</h2>
+  <ul>
+    <li>✅ Completed</li>
+  </ul>
+  <h2>Technologies Used</h2>
+  <ul>
+    <li>✅ Kotlin</li>
+    <li>✅ Android Studio</li>
+  </ul>
+  <h2>Publication Progress</h2>
+  <ul>
+    <li>Play Store (In approval process)</li>
+  </ul>
+  <h2>Prerequisites</h2>
+  <ul>
+    <li>Android Studio installed</li>
+    <li>Basic knowledge of Kotlin</li>
+  </ul>
+  <h2>Installation</h2>
+  <ol>
+    <li>Clone this repository: <code>git clone https://github.com/maikelkr/regra_de_tres_apk.git</code></li>
+    <li>Open the project in Android Studio</li>
+    <li>Build and run the app on an Android device or emulator</li>
+  </ol>
+  <h2>Usage</h2>
+  <p>Enter the known values in the appropriate fields and the app will calculate the unknown value using the Rule of Three.</p>
+  <h2>Contribution</h2>
+  <p>Contributions are welcome! Feel free to open issues and submit pull requests.</p>
+  <h2>License</h2>
+  <p>This project is licensed under the <a href="https://opensource.org/licenses/MIT">MIT License</a>.</p>
+  <h2>Contact</h2>
+  <p>For more information, contact me.</p>
+</body>
