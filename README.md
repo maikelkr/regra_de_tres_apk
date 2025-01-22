@@ -3,6 +3,9 @@
     <p>Este é um projeto simples de um aplicativo de Regra de Três desenvolvido para Android utilizando Android Studio e Kotlin.</p> 
     <h2>Funcionalidades</h2> <ul> <li>Calcular a Regra de Três simples</li> <li>Interface amigável e intuitiva</li> 
       <li>Compatível com várias versões do Android</li> </ul> 
+    <h2>Progresso de desenvolvimento</h2> <ul> <li>✅ Concluído</li> </ul> 
+    <h2>Tecnologias utilizadas</h2> <ul> <li>✅ Kotlin</li><li>✅ Android Studio</li> </ul>
+    <h2>Progresso de publicação</h2> <ul> <li>Play Store (Em processo de aprovação)</li></ul>
     <h2>Pré-requisitos</h2> 
     <ul> <li>Android Studio instalado</li> 
       <li>Conhecimento básico de Kotlin</li> </ul> 
