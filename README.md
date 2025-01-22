@@ -3,12 +3,12 @@
   <p>This is a simple project of a Rule of Three app developed for Android using Android Studio and Kotlin.</p>
   <h2>Features</h2>
   <ul>
-    <li>Calculate simple Rule of Three</li>
-    <li>Friendly and intuitive interface</li>
-    <li>Compatible with various Android versions</li>
-    <li>Switch between light and dark theme depending on your mobile device's theme.</li>
-    <li>English is the default app language.</li>
-    <li>Brazilian Portuguese is an optional app language if your device is set to Portuguese.</li>
+    <li>🔢 Calculate simple Rule of Three</li>
+    <li>😊 Friendly and intuitive interface</li>
+    <li>📱 Compatible with various Android versions</li>
+    <li>🌗 Switch between light and dark theme depending on your mobile device's theme.</li>
+    <li>🇬🇧 English is the default app language.</li>
+    <li>🇧🇷 Brazilian Portuguese is an optional app language if your device is set to Portuguese.</li>
   </ul>
   <h2>Development Progress</h2>
   <ul>
