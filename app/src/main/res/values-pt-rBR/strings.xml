@@ -11,5 +11,8 @@
     <string name="result_text">X</string>
     <string name="required_txt">Obrigatório*</string>
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/9214589741</string>
+    <string name="credits">Desenvolvido por: Maikel Krüger</string>
+    <string name="contact">Contato: madiriss.dev@gmail.com</string>
+    <string name="exit">Sair</string>
 
 </resources>

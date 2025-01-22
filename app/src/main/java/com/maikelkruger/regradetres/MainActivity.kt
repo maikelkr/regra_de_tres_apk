@@ -1,9 +1,10 @@
-package com.example.regradetres
+package com.maikelkruger.regradetres
 
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import com.example.regradetres.databinding.ActivityMainBinding
+import com.maikelkruger.regradetres.databinding.ActivityMainBinding
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import java.util.Locale
@@ -13,6 +14,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private var result = ""
     private lateinit var adView: AdView
+    private var toggled : Boolean = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -32,6 +34,23 @@ class MainActivity : AppCompatActivity() {
                 binding.imageLogo.setImageResource(R.drawable.logo_app_pt_br)
             }
         }
+        binding.settingsBtn.setOnClickListener {
+            if (!toggled){
+                toggleMenu(true)
+                toggled
+            }else{
+                toggleMenu(false)
+                !toggled
+            }
+        }
+        binding.frameMenuExit.setOnClickListener {
+            toggleMenu(false)
+            toggled = false
+        }
+        binding.buttonExit.setOnClickListener {
+            toggleMenu(false)
+            toggled = false
+        }
         binding.calculateButton.setOnClickListener {
             if(binding.comparisonNumber.text.toString() != "" && binding.referenceNumber.text.toString() != "" && binding.equivalentNumber.text.toString() != "") {
                 calculate()
@@ -44,12 +63,21 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
     }
+    private fun toggleMenu(toggled : Boolean){
+        if (toggled){
+            binding.frameMenu.visibility = View.VISIBLE
+            binding.frameMenuExit.visibility = View.VISIBLE
+        }else{
+            binding.frameMenu.visibility = View.GONE
+            binding.frameMenuExit.visibility = View.GONE
+        }
+    }
     private fun calculate() {
         val referenceNumber = binding.referenceNumber.text.toString().toDouble()
         val equivalentNumber = binding.equivalentNumber.text.toString().toDouble()
         val comparisonNumber = binding.comparisonNumber.text.toString().toDouble()
 
-        binding.inverseProportional.setOnCheckedChangeListener { _, isChecked ->
+        binding.inverseProportional.setOnCheckedChangeListener { _, isChecked: Boolean ->
             result = if (isChecked) {
                 ((comparisonNumber * equivalentNumber) / (referenceNumber)).toString()
 

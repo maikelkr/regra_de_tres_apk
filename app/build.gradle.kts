@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.regradetres"
+    namespace = "com.maikelkruger.regradetres"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.regradetres"
+        applicationId = "com.maikelkruger.regradetres"
         minSdk = 30
         targetSdk = 35
         versionCode = 1

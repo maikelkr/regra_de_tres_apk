@@ -17,11 +17,11 @@
         <item name="android:textColor">@color/gray</item>
     </style>
     <style name="InputStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="hintTextColor">@color/gray</item>
-        <item name="android:textColorHint">@color/light_gray</item>
+        <item name="hintTextColor">@color/light_white</item>
+        <item name="android:textColorHint">@color/light_white</item>
         <item name="android:backgroundTint">@color/dark_white</item>
         <item name="helperTextTextColor">@color/red</item>
-        <item name="endIconTint">@color/dark_white</item>
+        <item name="endIconTint">@color/light_white</item>
     </style>
     <style name="EditTextStyle">
         <item name="android:textColor">@color/dark_white</item>
