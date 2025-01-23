@@ -19,6 +19,12 @@
     <li>✅ Kotlin</li>
     <li>✅ Android Studio</li>
   </ul>
+  <h2>App Screenshots</h2>
+  <ul>
+    <img src="https://i.ibb.co/NWDXJCs/Whats-App-Image-2025-01-23-at-09-35-43.jpg" alt="Screenshot-1" title="Screenshot" height="500"/>
+    <img src="https://i.ibb.co/2N3DWBR/Whats-App-Image-2025-01-23-at-09-35-44.jpg" alt="Screenshot-1" title="Screenshot" height="500"/>
+  </ul>
+   
   <h2>Publication Progress</h2>
   <ul>
     <li>Play Store (In approval process)</li>
