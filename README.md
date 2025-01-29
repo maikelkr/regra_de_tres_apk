@@ -7,8 +7,7 @@
     <li>😊 Friendly and intuitive interface</li>
     <li>📱 Compatible with various Android versions</li>
     <li>🌗 Switch between light and dark theme depending on your mobile device's theme.</li>
-    <li>🇬🇧 English is the default app language.</li>
-    <li>🇧🇷 Brazilian Portuguese is an optional app language if your device is set to Portuguese.</li>
+    <li>Available in English and Brazilian Portuguese.</li>
   </ul>
   <h2>Development Progress</h2>
   <ul>
