@@ -11,7 +11,7 @@
   </ul>
   <h2>Development Progress</h2>
   <ul>
-    <li>✅ Completed</li>
+    <li>✅ Working on fixing bugs.</li>
   </ul>
   <h2>Technologies Used</h2>
   <ul>
