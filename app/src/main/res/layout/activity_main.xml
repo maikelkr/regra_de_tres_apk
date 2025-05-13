@@ -170,55 +170,58 @@
             android:textIsSelectable="true"
             tools:ignore="TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/comparisonNumberLabel"
         style="@style/InputStyle"
-        app:strokeColor="@null"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:layout_weight="1"
         android:hint="@string/comparison_text"
-        android:layout_marginTop="60dp"
+        app:endIconMode="clear_text"
+        app:helperText="@string/required_txt"
+        app:layout_constraintEnd_toEndOf="@+id/referenceNumberLabel"
         app:layout_constraintStart_toStartOf="@+id/referenceNumberLabel"
         app:layout_constraintTop_toBottomOf="@id/referenceNumberLabel"
-        app:helperText="@string/required_txt"
-        app:endIconMode="clear_text">
+        app:strokeColor="@null">
 
         <com.google.android.material.textfield.TextInputEditText
-            style="@style/EditTextStyle"
-            app:strokeColor="@null"
             android:id="@+id/comparisonNumber"
+            style="@style/EditTextStyle"
             android:layout_width="140dp"
             android:layout_height="50dp"
             android:ems="10"
             android:imeOptions="actionNext"
             android:inputType="number"
             android:textIsSelectable="true"
+            app:strokeColor="@null"
             tools:ignore="TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/resultNumberLabel"
         style="@style/InputStyle"
-        app:strokeColor="@null"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:hint="@string/result_text"
         app:layout_constraintEnd_toEndOf="@+id/equivalentNumberLabel"
-        app:layout_constraintTop_toTopOf="@+id/comparisonNumberLabel">
+        app:layout_constraintStart_toStartOf="@+id/equivalentNumberLabel"
+        app:layout_constraintTop_toTopOf="@+id/comparisonNumberLabel"
+        app:strokeColor="@null">
 
         <com.google.android.material.textfield.TextInputEditText
-            style="@style/EditTextStyle"
-            app:strokeColor="@null"
             android:id="@+id/resultNumber"
+            style="@style/EditTextStyle"
             android:layout_width="140dp"
             android:layout_height="50dp"
             android:ems="10"
-            xml:space="preserve"
-            android:imeOptions="actionNext"
             android:focusable="false"
-            tools:ignore="TextContrastCheck" />
+            android:imeOptions="actionNext"
+            app:strokeColor="@null"
+            tools:ignore="TextContrastCheck"
+            xml:space="preserve" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
