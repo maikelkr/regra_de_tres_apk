@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.maikelkruger.regradetres.databinding.ActivityMainBinding
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
+import java.text.DecimalFormat
 import java.util.Locale
 
 
@@ -77,12 +78,13 @@ class MainActivity : AppCompatActivity() {
         val equivalentNumber = binding.equivalentNumber.text.toString().toDouble()
         val comparisonNumber = binding.comparisonNumber.text.toString().toDouble()
 
-        if (binding.inverseProportional.isChecked) {
-           result = ((comparisonNumber * referenceNumber) / (equivalentNumber)).toString()
+        result = if (binding.inverseProportional.isChecked) {
+            ((comparisonNumber * referenceNumber) / (equivalentNumber)).toString()
         } else {
-           result = ((comparisonNumber * equivalentNumber) / (referenceNumber)).toString()
+            ((comparisonNumber * equivalentNumber) / (referenceNumber)).toString()
         }
-        binding.resultNumber.setText(result)
+        val df = DecimalFormat("#.##")
+        binding.resultNumber.setText(df.format(result.toDouble()))
     }
     private fun clear() {
         binding.referenceNumber.setText("")
